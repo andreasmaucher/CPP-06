@@ -6,12 +6,12 @@
 #    By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#              #
-#    Updated: 2024/08/27 22:53:55 by amaucher         ###   ########.fr        #
+#    Updated: 2024/09/11 22:25:27 by amaucher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = bureaucrat
-SOURCES = main.cpp Bureaucrat.cpp
+NAME = scalarconv
+SOURCES = main.cpp ScalarConverter.cpp
 		
 OBJS = $(SOURCES:.cpp=.o)
 
