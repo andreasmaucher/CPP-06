@@ -6,7 +6,7 @@
 /*   By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#             */
-/*   Updated: 2024/09/11 22:55:02 by amaucher         ###   ########.fr       */
+/*   Updated: 2024/09/13 10:51:35 by amaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
  * and check wether the conversion would make sense before actually displaying the
  * casted number
 */
-static void	displayConversion(double d) {
+static void	displayConversion(double d)
+{
 	char c = static_cast<char>(d);
 	int i = static_cast<int>(d);
 	float f = static_cast<float>(d);
@@ -56,9 +57,11 @@ static void	displayConversion(double d) {
 /**
  * pop the f in the back of literal, so strtod has no problem with the conversion
 */
-void	ScalarConverter::convert(std::string literal) {
+void	ScalarConverter::convert(std::string literal)
+{
 	double	d;
 	char *endptr;
+	
 	if (literal.size() == 1 && !std::isdigit(literal[0]))
 		d = literal[0];
 	else if (literal == "nan")
