@@ -38,9 +38,14 @@ class ScalarConverter
 			static void convert(std::string literal);
 		
 	private:
-			// constructor private to make the class non instantiable
+			// Default constructor
 			ScalarConverter(void);
-		
+			// Copy constructor
+			ScalarConverter(ScalarConverter const &src);
+			// Copy assignment operator
+			ScalarConverter &operator=(ScalarConverter const &src);
+			// Destructor
+			~ScalarConverter(void);
 };
 
 #endif

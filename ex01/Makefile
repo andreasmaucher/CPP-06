@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = scalarconv
-SOURCES = main.cpp ScalarConverter.cpp
+NAME = serializer
+SOURCES = main.cpp Serializer.cpp
 		
 OBJS = $(SOURCES:.cpp=.o)
 
