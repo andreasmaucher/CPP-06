@@ -30,9 +30,10 @@ ScalarConverter &ScalarConverter::operator=(ScalarConverter const &src) {
 ScalarConverter::~ScalarConverter(void) {}
 
 // print the conversion
+// static char for type conversions between different types 
 static void	printConversion(double d)
 {
-	char c = static_cast<char>(d); //? what is happening
+	char c = static_cast<char>(d);
 	int i = static_cast<int>(d);
 	float f = static_cast<float>(d);
 

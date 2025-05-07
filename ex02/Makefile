@@ -1,0 +1,42 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: amaucher <amaucher@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/02/23 14:22:27 by amaucher          #+#    #+#              #
+#    Updated: 2024/09/11 22:25:27 by amaucher         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = serializer
+SOURCES = main.cpp RealType.cpp
+		
+OBJS = $(SOURCES:.cpp=.o)
+
+CXX = c++
+RM = rm -f
+CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
+
+all: $(NAME)	
+
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	$(RM) $(OBJS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean $(NAME)
+
+# for running with valgrind (make valgrind)
+valgrind: $(NAME)
+	valgrind --leak-check=full ./$(NAME)
+
+.PHONY: all clean fclean re valgrind
