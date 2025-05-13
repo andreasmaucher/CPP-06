@@ -10,14 +10,14 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = scalarconv
+NAME = converter
 SOURCES = main.cpp ScalarConverter.cpp
 		
 OBJS = $(SOURCES:.cpp=.o)
 
 CXX = c++
 RM = rm -f
-CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98 -Wunused-includes
 
 all: $(NAME)	
 
