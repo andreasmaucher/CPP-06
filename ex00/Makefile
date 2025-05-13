@@ -17,8 +17,7 @@ OBJS = $(SOURCES:.cpp=.o)
 
 CXX = c++
 RM = rm -f
-CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98 -Wunused-includes
-
+CXXFLAGS = -g -Wall -Wextra -Werror -std=c++98
 all: $(NAME)	
 
 $(NAME): $(OBJS)
